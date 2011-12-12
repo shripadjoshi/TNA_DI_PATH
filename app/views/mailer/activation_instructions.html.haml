@@ -1,0 +1,31 @@
+%p
+ Dear
+ = @user.login
+ ,
+ %br
+ %br
+ Thank you for signing up to TNA DI PATH Success System. To complete your account creation, please click the "Activate Your Account" link and login using your username and password :
+ %br
+ %br
+ %strong User Name :
+ = @user.email
+ OR 
+ = @user.login
+ %br
+ %br
+ = link_to "Activate Your Account", @account_activation_url
+ %br
+ %br
+ If the above link does not work, copy & paste the following link in your browser and log in using the details provided above.
+ %br
+ %br
+ = @account_activation_url
+ %br
+ %br
+ Thank you for using TNA DI PATH Success System and if you have any comments or just want to send a note, email us. We like to hear from you.
+ %br
+ %br
+ Regards,
+ %br 
+ TNA DI Team.
+ %br

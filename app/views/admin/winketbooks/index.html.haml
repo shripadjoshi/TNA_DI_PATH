@@ -1,0 +1,16 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Winkt Books
+ .incontent
+  = link_to 'New Winkt Book', new_admin_winketbook_path
+  %br
+  %br
+  -@winketbooks.each_with_index do |winketbook, index|
+   %div(class="#{(index%2==0) ? "list" : "list_simple"}")
+    = link_to 'Add Chapter', new_admin_winketbook_winketchapter_url(winketbook)
+    |
+    = link_to 'Edit', edit_admin_winketbook_path(winketbook)
+    |
+    = link_to 'Destroy', admin_winketbook_path(winketbook), :confirm => 'Are you sure?', :method => :delete
+    |
+    = link_to winketbook.title, admin_winketbook_url(winketbook)

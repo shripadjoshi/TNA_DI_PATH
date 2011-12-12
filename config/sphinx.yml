@@ -1,0 +1,9 @@
+development:
+  mem_limit: 128M
+  morphology: none
+  enable_star: true
+  min_prefix_len: 1
+  min_word_len: 1
+  charset_table: "0..9, A..Z->a..z,a..z, `, ~, !, @, %, ^, &, (, ), -, _, +, =, {, }, [, ], |, :, ;, ', <, >, ?, /,#" 
+  #searchd_log_file: "RAILS_ROOT/log/searchd.log"
+  #query_log_file: "RAILS_ROOT/log/searchd.query.log"

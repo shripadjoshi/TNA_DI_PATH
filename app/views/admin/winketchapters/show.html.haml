@@ -1,0 +1,9 @@
+.artUp
+.artM
+ %h1(class= "subcategory")= "#{@winketchapter.winketbook.title} -   #{@winketchapter.title}"
+ .incontent
+  -#= link_to 'Add Winkt', new_admin_winktchapter_winkt_url(@winktchapter)
+  |
+  = link_to 'Back to Book', admin_winketbook_path(@winketchapter.winketbook)
+  |
+  -#= link_to 'Back to Winkts A-Z', admin_winkts_path

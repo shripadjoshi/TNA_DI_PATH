@@ -1,0 +1,18 @@
+.artUp
+.artM
+ %h1(class= "subcategory")E-Stories
+ .incontent
+  = link_to 'New E-Story', new_admin_e_story_path
+  %br
+  %br
+  .listpage
+   -@e_stories.each_with_index do |e_story, index|
+    = link_to e_story.content, edit_admin_e_story_path(e_story), :title => e_story.content
+    = link_to 'Edit', edit_admin_e_story_path(e_story)
+    |
+    = link_to 'Destroy', admin_e_story_path(e_story), :confirm => 'Are you sure?', :method => :delete
+    |
+    %div(id="favourite_#{e_story.id}" class="favourite")
+     = render :partial => "favourite", :locals => {:e_story => e_story}
+    %br
+    %br

@@ -1,0 +1,20 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Articles
+ .incontent
+  = link_to 'New article', new_admin_article_path
+  %ul(id="articles")
+   -@articles.each_with_index do |article,index|
+    %div(class="#{(index%2==0)? 'list' : 'list_simple'}")
+     %li(class="list_articles" id="article_#{article.id}")
+      %span(class="name")
+       = render :partial => "articles", :locals => {:article => article}
+      %span(class="handle") [change article order? just drag and drop ]
+      %span(class="expand" id="expand_#{article.id}")Expand
+      %div(class="childs"  id="child_#{article.id}")
+       %ul(id="child_articles")
+        -Article.child_articles(article).each do |child|
+         %li
+          -# This will render partial with child articles
+          = render :partial => "articles", :locals => {:article => child}
+          

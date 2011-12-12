@@ -1,0 +1,116 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+ %head
+  %meta{:"http-equiv" => "Content-Type", :content => "text/html;charset=utf-8" }
+  %title TNA-DI-PATHFINDER
+  = stylesheet_link_tag 'application'
+ %body
+  -current_user
+  #wrapper
+   #header
+    #logo= link_to image_tag("logo.jpg"), root_url
+    #topNav
+     - unless current_user.blank?
+      .log
+       = link_to "Logout", admin_logout_path, :method => :delete, :confirm => "Are you sure you want to logout?"
+     .clear
+     .message
+      -#Fetching User name logic goes here....
+      - unless current_user.blank?
+       =current_user.login
+       ,
+      welcome to your DOIT Success System
+     -#All the categories menu will come here...............
+     %ul(id="topnav")
+      %li(class="home")
+       = link_to "home", root_url ###Need to change the link
+      %li(class="bussines")
+       = link_to "Business" ###Link need to be written
+       %div(class="sub")
+        %ul
+         %li
+          = link_to image_tag("/mouse_hover/Introduction.png")+"Introduction", "", :class=> "rolloverlefttop"
+         %li
+          = link_to image_tag("/mouse_hover/leadership_47x47.png")+"Leadership", "", :class=> "rolloverleft"
+         %li
+          = link_to image_tag("/mouse_hover/revgen_47x47.png")+"Rev Gen", "", :class=> "rolloverleft"
+         %li
+          = link_to image_tag("/mouse_hover/finances_47x47.png")+"Finance", "", :class=> "rolloverleftdown"
+        %ul
+         %li
+          = link_to image_tag("/mouse_hover/customer_47x47.png")+"Customer", "", :class=> "rolloverrighttop"
+         %li
+          = link_to image_tag("/mouse_hover/staff_47x47.png")+"Staff", "", :class=> "rolloverright"
+         %li
+          = link_to image_tag("/mouse_hover/suppliers_47x47.png")+"Suppliers", "", :class=> "rolloverright"
+         %li
+          = link_to image_tag("/mouse_hover/operations_47x47.png")+"Operations", "", :class=> "rolloverrightdown"
+      %li(class="personal")
+       = link_to "personal" ####Link to be made
+       %div(class="sub")
+        %ul
+         %li
+          = link_to image_tag("/mouse_hover/Introduction.png")+"Introduction", "", :class=> "rolloverlefttop"
+         %li
+          = link_to image_tag("/mouse_hover/wellbeing_47x47.png")+"Wellbeing", "", :class=> "rolloverleft"
+         %li
+          = link_to image_tag("/mouse_hover/Skills-Academy.png")+"Skills Academy", "", :class=> "rolloverleft"
+         %li
+          = link_to image_tag("/mouse_hover/innerme_47x47.png")+"Inner Me", "", :class=> "rolloverleftdown"
+        %ul
+         %li
+          = link_to image_tag("/mouse_hover/family_47x47.png")+"Family", "", :class=> "rolloverrighttop"
+         %li
+          = link_to image_tag("/mouse_hover/friends_47x47.png")+"Friends", "", :class=> "rolloverright"
+         %li
+          = link_to image_tag("/mouse_hover/career_47x47.png")+"Career", "", :class=> "rolloverright"
+         %li
+          = link_to image_tag("/mouse_hover/personalfinance_47x47.png")+"Pers Fin", "", :class=> "rolloverrightdown"
+      %li(class="myarea")
+       = link_to "My Account" ###Link to be made
+    #logoComp
+    .clear
+   #container
+    #page
+     #secondNav
+      -#All the breadcrum logic goes here.....
+     = flash[:error]
+     = flash[:success]
+     = flash[:notice]
+     = yield
+     .artDown
+     #footer
+      %ul
+       %li= link_to "Home", root_url
+       %li
+        %a{:href=>"#About"} About
+       %li
+        %a{:href =>"#Contact"}Contact
+       %li{:class=>"copyright"} &copy; Shripad 2011
+    #sidebar
+     %p{:class=>"data"}= Time.now.strftime("%d %B, %Y")
+     %p{:class=>"title"}Frequently Used Shortcuts
+     %div{:id=>"navtxt", :class=>"navtextall", :style=>"position:absolute; top:-90px; left:0px; visibility:hidden"}
+     -#Write Here Favourite icons......................
+     -unless current_user.blank?
+      %br
+      = link_to "Users", admin_users_path
+      %br
+      = link_to "Categories", admin_categories_path
+      %br
+      = link_to "Category Images", admin_category_images_path
+      %br
+      = link_to "Articles", admin_articles_path
+      %br
+      = link_to "Quotes", admin_quotes_path
+      %br
+      = link_to "E-Stories", admin_e_stories_path
+      %br
+      = link_to "E-Tutors", admin_e_tutors_path
+      %br
+      = link_to "Winketbooks", admin_winketbooks_path
+ -# These javascript files are intentially kept down because this will called at last
+ = javascript_include_tag :defaults #This has to removed after code is optimised for rack bug
+ = javascript_include_tag "jquery.autocomplete" #This has to removed after code is optimised for rack bug
+ -#= javascript_include_tag "jquery-ui", "jrails", "application"
+ = javascript_include_tag "jquery.hoverIntent.minified"

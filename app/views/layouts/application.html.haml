@@ -1,0 +1,55 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+ %head
+  %meta{:"http-equiv" => "Content-Type", :content => "text/html;charset=utf-8" }
+  %title TNA-DI-PATHFINDER
+  = stylesheet_link_tag 'application'
+ %body
+  -current_user
+  #wrapper
+   #header
+    #logo= link_to image_tag("logo.jpg"), root_url
+    #topNav
+     - unless current_user.blank?
+      .log
+       = link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?"
+      .log
+       = link_to "Reset Password?", new_password_reset_path
+     .clear
+     .message
+      -#Fetching User name logic goes here....
+      - unless current_user.blank?
+       =current_user.login
+       ,
+      welcome to your DOIT Success System
+     -#All the categories menu will come here...............
+    #logoComp
+    .clear
+   #container
+    #page
+     #secondNav
+      -#All the breadcrum logic goes here.....
+     = flash[:error]
+     = flash[:success]
+     = flash[:notice]
+     = yield
+     .artDown
+     #footer
+      %ul
+       %li= link_to "Home", root_url
+       %li
+        %a{:href=>"#About"} About
+       %li
+        %a{:href =>"#Contact"}Contact
+       %li{:class=>"copyright"} &copy; Shripad 2011
+    #sidebar
+     .search
+      -form_tag '/search', {:id => "globalsearch", :class => "" } do
+       %fieldset
+        %input{:type=>"search", :id=>'searchstring', :name=>'searchstring', :placeholder=>"Search", :class=>"input_search", :autosave=>""}
+       #searchstring_auto_complete.auto_complete
+       .inside
+     %p{:class=>"data"}= Time.now.strftime("%d %B, %Y")
+     %p{:class=>"title"}Frequently Used Shortcuts
+     %div{:id=>"navtxt", :class=>"navtextall", :style=>"position:absolute; top:-90px; left:0px; visibility:hidden"}
+     -#Write Here Favourite icons......................

@@ -1,0 +1,24 @@
+.artUp
+.artM
+ %h1(class= "subcategory")New Quote
+ .incontent
+  .reset_form
+   -form_for([:admin,@quote]) do |f|
+    = f.error_messages
+    = f.label :content
+    %fieldset
+     = f.text_area :content
+    = f.label :speaker
+    %fieldset
+     = f.text_field :speaker
+    =f.label :sys_favourite
+    =f.check_box :sys_favourite
+    %br
+    %br
+    %label(for="Category")Select Categories
+    %fieldset
+     = collection_select :quote, :category_ids, Category.find(:all, :order => :title), :id, :title,{ :selected => @quote.category_ids },{ :multiple => true, :name => 'quote[category_ids][]' }
+    %label(for="Category")Select Articles
+    %fieldset
+     = collection_select :quote, :article_ids, Article.find(:all, :order => :name), :id, :name,{ :selected => @quote.article_ids },{ :multiple => true, :name => 'quote[article_ids][]' }
+    = f.submit 'Create Quote', {:class => "button_orange_arrow"}

@@ -1,0 +1,2 @@
+page.replace_html "favourite_#{params[:id]}", :partial => 'favourite', :locals => {:quote => @quote}
+@quote.sys_favourite? ? page << "alert('Quote was successfully marked as Sys. Favourite.');" : page << "alert('Quote was successfully un-marked as sys. Favourate.');"

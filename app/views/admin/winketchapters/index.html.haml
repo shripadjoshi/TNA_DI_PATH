@@ -1,0 +1,7 @@
+.artUp
+.artM
+ %h1(class= "subcategory") Listing Winktchapters
+ .incontent
+  -@winketchapters.each do |winketchapter|
+   = link_to winketchapter.title, winketchapter
+   = pluralize(winketchapter.winkets.count, "Winkt")

@@ -1,4 +1,46 @@
 ActionController::Routing::Routes.draw do |map|
+  ##Route for main page
+  map.root :controller => "application"
+  #Route for main page ends here
+
+  ###Routes for user session
+  map.resource :user_session
+  #map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
+  #Routes for user session ends here
+
+  #Routes for the users
+  map.resource :account, :controller => "users"
+  map.resources :users
+  #Routes for the users end here
+
+  ###Routes for mailer related activities
+  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
+  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
+  ###Routes for mailer related activities end here
+
+  ##Routes for password reset
+  map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
+  ###Route for password reset end here
+
+  ##Routes for admin go here
+  map.namespace :admin do |admin|
+    admin.resource :admin_session
+    admin.resources :users
+    admin.resources :categories, :collection => {:search => :post, :autocomplete_search => :get}
+    admin.resources :category_images, :collection => {:uploadfile => :get}
+    admin.resources :articles, :collection => {:sort => :post} , :member => {:down => :get, :up => :get,:add_child => :get, :remove_child => :get}
+    admin.resources :quotes,:member =>{:change_fav => :get}
+    admin.resources :e_stories,:member =>{:change_fav => :get}
+    admin.resources :e_tutors,:member =>{:change_fav => :get}
+    admin.resources :winketbooks, :has_many => :winketchapters
+    admin.resources :winketchapters, :has_many => :winkets
+    admin.resources :wikets
+    admin.login "/", :controller => "admin_sessions", :action => "new"
+    admin.welcome "welcome", :controller => "welcome", :action => "index"
+    admin.logout "logout", :controller => "admin_sessions", :action => "destroy"
+    admin.connect ":controller/:action/:id"
+  end
+  #Routes for admin end here
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

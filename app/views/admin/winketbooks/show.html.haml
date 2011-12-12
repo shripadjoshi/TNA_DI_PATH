@@ -1,0 +1,21 @@
+.artUp
+.artM
+ %h1(class= "subcategory")= @winketbook.title
+ .incontent
+  = @winketbook.description
+  %h2 Chapters inside
+  %ol
+   -@winketbook.winketchapters.each do |chapter|
+    %li
+     = link_to "Edit", edit_admin_winketchapter_path(chapter)
+     = link_to "Destroy", admin_winketchapter_path(chapter), :confirm => 'Are you sure?', :method => :delete
+     = link_to chapter.title, admin_winketchapter_path(chapter)
+  %br
+  = link_to 'Add Chapter', new_admin_winketbook_winketchapter_url(@winketbook)
+  |
+  = link_to 'Edit', edit_admin_winketbook_path(@winketbook)
+  |
+  = link_to 'Back to List', admin_winketbooks_path
+  |
+  -#= link_to 'Back to Winkts A-Z', admin_winkts_path
+    

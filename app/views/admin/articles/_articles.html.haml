@@ -1,0 +1,6 @@
+= link_to article.name, edit_admin_article_path(article)
+= (link_to "UP", up_admin_article_path(article)) unless(Article.find_next_article(article.position,article.article_parent_id,"<","desc").blank?)
+= (link_to "Down", down_admin_article_path(article)) unless(Article.find_next_article(article.position,article.article_parent_id,">","asc").blank?)
+= (link_to "Add Child", add_child_admin_article_path(article)) if(article.article_parent_id==0)
+= (link_to "Remove Child", remove_child_admin_article_path(article)) unless(article.article_parent_id==0)
+= link_to 'Destroy', admin_article_path(article), :confirm => 'Are you sure?', :method => :delete

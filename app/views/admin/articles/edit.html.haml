@@ -1,0 +1,21 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Edit Article
+ .incontent
+  .reset_form
+   -form_for([:admin,@article]) do |f|
+    = f.error_messages
+    = f.label :name
+    %fieldset
+     = f.text_field :name
+    = f.label :article_parent_id
+    %fieldset
+     = collection_select(:article, :article_parent_id, @articles, :id, :name, options ={:prompt => "-Select a Article-"})
+    %label(for="Category")Categories
+    %fieldset
+     = collection_select :article, :category_ids, Category.find(:all, :order => :title), :id, :title,{ :selected => @article.category_ids },{ :multiple => true, :name => 'article[category_ids][]' }
+    = f.submit 'Create Article', {:class => "button_orange_arrow"}
+    %br
+    %br
+    = link_to 'Back', admin_articles_path
+

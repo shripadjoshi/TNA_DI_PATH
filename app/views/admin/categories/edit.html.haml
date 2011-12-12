@@ -1,0 +1,20 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Edit Category
+ .incontent
+  .reset_form
+   -form_for([:admin,@category]) do |f|
+    = f.error_messages
+    %fieldset
+     = f.label :title
+     %br
+     = f.text_field :title
+    %fieldset
+     = f.label :description
+     %br
+     = f.text_area :description
+    %fieldset
+     = f.label :Parent
+     %br
+     = tree_select(Category.root_categories, 'parent', 'id', "input-two-column", @category)
+    = f.submit 'Edit Category', {:class => "button_orange_arrow"}

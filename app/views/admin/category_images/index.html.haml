@@ -1,0 +1,20 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Category Image
+ .incontent
+  .reset_form
+   -form_tag({:action => 'uploadfile'},:multipart => true) do |f|
+    -#if @error!=false
+     -#= f.error_messages
+    %fieldset
+     %label(for="upload_file")Select File :
+     =file_field 'upload', 'category_image'
+     %fieldset
+      %label(for="Category")Category
+      = collection_select :category, :ids, Category.find(:all, :order => :title), :id, :title, {}, :multiple => true, :name => 'category[ids][]'
+     %fieldset
+      %label(for="Image")Image Type
+      = select("category", "image", CategoryImage::IMAGE_TYPES,{:prompt => "Select Image Type"})
+     %fieldset(class="right")
+      =submit_tag "Save", :id => "button"
+     

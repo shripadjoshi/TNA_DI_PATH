@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: 
+ id: 1
+ title: one
+ description: one description
+#
+two: 
+ id: 2
+ title: two
+ description: two description
+
+three:
+  id: 3
+  title: three
+  description: three description
+  parent_id: 1
+
+four:
+  id: 4
+  title: four
+  description: four description
+  parent_id: 2

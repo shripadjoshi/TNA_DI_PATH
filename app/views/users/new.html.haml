@@ -1,0 +1,10 @@
+.artUp
+.artM
+ %h1(class="subcategory")Register
+ .incontent
+  .reset_form
+   -form_for @user, :url => account_path do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %fieldset(class="right")
+     = f.submit "Register", {:id => "button"}

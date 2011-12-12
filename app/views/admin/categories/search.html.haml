@@ -1,0 +1,10 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Categories
+ .incontent
+  = render :partial => '/search_partials/search', :locals => {:path => search_admin_categories_path}
+  %br
+  = link_to 'Create category', new_admin_category_path, {:class => "button_orange_arrow"}
+  %br
+  %br
+  =display_categories(@categories)

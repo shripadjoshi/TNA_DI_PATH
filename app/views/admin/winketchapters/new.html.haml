@@ -1,0 +1,17 @@
+.artUp
+.artM
+ %h1(class= "subcategory")New Winktchapter
+ .incontent
+  .reset_form
+   -form_for([:admin,@winketchapter]) do |f|
+    = f.error_messages
+    = f.label :title
+    %br
+    %fieldset
+     = f.text_field :title
+    = hidden_field :winketchapter, :winketbook_id
+    = f.submit 'Create', {:class => "button_orange_arrow"}
+    |
+    = link_to 'Back to Book', admin_winketbook_path(@winketchapter.winketbook)
+    |
+    -#= link_to 'Back to Winkts A-Z', admin_winkts_path

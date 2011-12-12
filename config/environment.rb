@@ -38,4 +38,22 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  config.gem "rails", :version => "=2.3.8"
+  config.gem "mysql"
+  config.gem "authlogic", :version => "=2.1.6"
+  config.gem "haml", :version => "=3.0.25"
+  config.gem "inherited_resources", :version => "=1.0.6"
+  config.gem "awesome_nested_set", :version => "=1.4.3"
+  #config.gem "thinking_sphinx",:lib => "thinking_sphinx", :version => "2.0.7"
+
+  
+  ###Mailer configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address  => "smtp.gmail.com",
+    :port  => 25,
+    :user_name  => "tnadipath@gmail.com",
+    :password  => "pathfinder123",
+    :authentication  => :plain
+  }
 end

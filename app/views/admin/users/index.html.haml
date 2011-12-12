@@ -1,0 +1,12 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Users
+ .incontent
+  .header
+   login name
+   Email Address
+  -@users.each do |user|
+   .data
+    =user.login
+    =user.email
+  

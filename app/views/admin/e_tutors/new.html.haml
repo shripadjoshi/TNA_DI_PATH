@@ -1,0 +1,24 @@
+.artUp
+.artM
+ %h1(class= "subcategory")New E-Tutor
+ .incontent
+  .reset_form
+   -form_for([:admin,@e_tutor]) do |f|
+    = f.error_messages
+    = f.label :content
+    %fieldset
+     = f.text_area :content
+    = f.label :url
+    %fieldset
+     = f.text_field :url
+    =f.label :sys_favourite
+    =f.check_box :sys_favourite
+    %br
+    %br
+    %label(for="Category")Select Categories
+    %fieldset
+     = collection_select :e_tutor, :category_ids, Category.find(:all, :order => :title), :id, :title,{ :selected => @e_tutor.category_ids },{ :multiple => true, :name => 'e_tutor[category_ids][]' }
+    %label(for="Category")Select Articles
+    %fieldset
+     = collection_select :e_tutor, :article_ids, Article.find(:all, :order => :name), :id, :name,{ :selected => @e_tutor.article_ids },{ :multiple => true, :name => 'e_tutor[article_ids][]' }
+    = f.submit 'Create E-Tutor', {:class => "button_orange_arrow"}

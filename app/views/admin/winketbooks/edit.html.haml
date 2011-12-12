@@ -1,0 +1,19 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Edit Winktbook
+ .incontent
+  .reset_form
+   -form_for([:admin,@winketbook]) do |f|
+    = f.error_messages
+    %fieldset
+     = f.label :title
+     %br
+     = f.text_field :title
+    %fieldset
+     = f.label :description
+     %br
+     = f.text_area :description
+    = f.submit 'Edit Winktbook', {:class => "button_orange_arrow"}
+    |
+    = link_to 'Back to List', admin_winketbooks_path
+    -#= link_to 'Back to Winkts A-Z', admin_winkts_path

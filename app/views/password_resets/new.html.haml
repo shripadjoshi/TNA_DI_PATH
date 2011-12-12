@@ -1,0 +1,11 @@
+.artUp
+.artM
+ %h1{:class=>"subcategory"}Reset Password
+ .incontent
+  %p Please enter your email address below and then press "Reset Password".
+  .reset_form
+   -form_tag password_resets_path do
+    %fieldset
+     = text_field_tag :email
+    %fieldset(class="right")
+     = submit_tag "Reset Password", {:id => "button"}

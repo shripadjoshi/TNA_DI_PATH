@@ -1,0 +1,45 @@
+-current_user
+.artUp
+.artM
+ %h1{:class=>"subcategory"}Welcome &amp; Congratulations!
+ .incontent
+  .left_home
+   .video_box
+    %object{:width=>"425", :height=>"344"}
+     %param{:name=>"movie", :value=>"http://www.youtube.com/v/c37vaBsTAvA?fs=1&amp;hl=en_US&amp;rel=0"}
+     %param{:name=>"allowFullScreen", :value=>"true"}
+     %param{:name=>"allowscriptaccess", :value=>"always"}
+     %param{:name=>"Volume", :value=>"-550"}
+     %embed{:src=>"http://www.youtube.com/v/c37vaBsTAvA?fs=1&amp;hl=en_US&amp;rel=0", :type=>"application/x-shockwave-flash", :allowscriptaccess=>"always", :allowfullscreen=>"true", :width=>"425", :height=>"344", :volume=>-550}
+   #button_signup_doit_home
+    = link_to "Sign up for TNA DI PATH now!",new_account_path,{:class=>"rollover"}
+   .text_box
+    %p
+     So how does TNA DI PATH make
+     %br
+     you and your business more sucessfull?
+     #button_orange_arrow_center
+      = link_to "Take the tour now ! ", "#HH", {:class => "rollover"}
+  .right_home
+   %h3 Welcome Back
+   .h3_box
+    - @user_session = UserSession.new if !@user_session
+    - if current_user.blank?
+     = render :partial => '/user_sessions/login_form'
+   .home_quotes
+    %h2 Related Quotes
+    -# All generateed random quotes
+   %h3 Our services
+   .h3_box
+    .inbox
+     .white_contUp
+     .white_contM
+      %ul
+       %li= link_to "Introduction", "#intro", :method => :get
+       %li= link_to "Executive Coaching & Mentoring", "#intro", :method => :get
+       %li= link_to "DOIT “Strategy To Action” Workshops", "#intro", :method => :get
+       %li= link_to "Chairmen And NEDs", "#intro", :method => :get
+       %li= link_to "Business Turnaround Advice", "#intro", :method => :get
+       %li= link_to "About Peter Ryding", "#intro", :method => :get
+     .white_contDown
+     

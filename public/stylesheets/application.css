@@ -1,0 +1,530 @@
+/* 
+    Document   : application
+    Created on : Apr 17, 2011, 11:48:00 AM
+    Author     : Admin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+body {margin: 0 auto; padding: 0px; background:#dde8ee url(/images/bg.jpg) repeat-x left top; font-size:13px; font-family: Helvetica, Arial,  sans-serif; color: #333333; line-height: 18px; text-align:center;}
+a{cursor:pointer;}
+img{cursor:pointer;}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* CLEARFIX
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div:after,
+ul:after, ol:after,
+.cfix:after {content: "."; display: block; height: 0px; clear: both; visibility: hidden; line-height: 0px;}
+* html div,
+* html dl,
+* html ul,
+* html ol,
+* html .cfix {height: 1%}
+div,
+ul, ol,
+.cfix {display: inline-block}
+div,
+ul, ol,
+.cfix {display: block}
+
+.clear{clear:both; margin:0; padding:0; height: 0px; line-height: 0px;}
+
+table { border-collapse:collapse; }
+table,th, td { border: 1px solid #c3d5de; }
+table td { padding:10px; }
+
+.alignleft{float:left; margin:5px 5px 5px 0;}
+.alignright{float:right; margin:5px 0px 5px 5px;}
+.aligncenter{text-align:center;}
+.textleft{text-align:left;}
+
+
+/*-----*/
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* reset tags
+/*--------------------------------------------------------------------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6{margin:0;padding:0; font-weight:normal;}
+form,fieldset,input,label,textarea,selects{margin: 0px; padding: 0px; border:none; background-color: transparent;}
+/*This we uncomment for the tree view of the categories*/
+ul,dl,dt,dd,ol,li,
+p,hr,blockquote{background-color:transparent;
+
+color:#4F4F4F;
+
+font-family:Arial,Helvetica,sans-serif;
+font-size:12px;
+font-style:normal;
+font-weight:normal;
+line-height:16px;
+list-style:none outside none;
+margin:0;
+outline:medium none;
+padding:5px;}
+
+
+hr,blockquote{margin: 0px; padding: 0px; outline: none; border: none; font-style: normal; font-weight: normal;background-color: transparent; list-style: none;font-family: Arial, Helvetica, sans-serif; color: #4F4F4F; font-size: 12px; line-height: 16px}
+p{margin: 0px; padding: 0px; outline: none; border: none; font-style: normal; font-weight: normal;background-color: transparent; list-style: none;font-family: Arial, Helvetica, sans-serif; color: #4F4F4F; font-size: 15px; line-height: 16px}
+
+em {font-style: italic;}
+strong {font-weight: bold}
+
+p{padding: 2px 0px 2px 0px}
+
+.blue{color:#304c7f;}
+/*-----*/
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* usefful
+/*--------------------------------------------------------------------------------------------------------------------------*/
+a {color:#729dcf; text-decoration:underline;}
+a:hover {color:#729dcf; text-decoration:none; }
+a img {border: none;}
+
+.alignleft{float:left; margin:5px 5px 5px 0;}
+.alignright{float:right; margin:5px 0px 5px 5px;}
+.aligncenter{text-align:center;}
+
+/*-----*/
+
+#wrapper{margin:0 auto; text-align:left; width:969px;}
+
+
+h2{color:#333333; padding:5px 0 10px 0; font-size:13px;}
+h3{color:#304c7f; padding:5px 0 5px 0; font-size:18px;}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* HEADER
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div#header{width:969px; height:130px; }
+div#header div#logo{float:left; width:287px; }
+div#header div#logo img{padding-left:7px;}
+div#header div#topNav{float:left; width:484px; }
+div#header div#logoComp{float:right; width:181px; height:92px; margin-top:21px; background:url(/images/logo_holder.jpg) top left no-repeat;}
+
+div#header div#topNav div.log{float:right; width:125px; height:23px; text-align:center; background:url(/images/log.jpg) top left no-repeat; margin:0; padding:0;}
+div#header div#topNav div.log a{color:#d3d9e2; text-decoration:none; margin:0; padding:0;}
+div#header div#topNav div.log a:hover{color:#d3d9e2; text-decoration:underline; margin:0; padding:0;}
+
+div#header div#topNav div.message{margin:0; padding:0; text-align:right; margin-top:18px; height:24px; font-size:16px; color:#FFFFFF;  }
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* CSS for Top Navigations
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* CONTENT
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div#container {width:969px; margin-top:12px;}
+div#container div#page{width:770px; float:left;}
+div#container div#sidebar{width:181px; float:right;}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* secondNav
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+div#container div#page div#secondNav {width:770px;}
+div#container div#page div#secondNav ul{ height:19px; margin:7px 0 9px 8px;}
+div#container div#page div#secondNav ul li{float:left; background:#becfdf url(/images/secondNav_li.jpg) right center no-repeat; margin:0; padding:0;}
+div#container div#page div#secondNav ul li a{padding:2px 25px 0 20px; color:#333333; text-decoration:none;}
+
+div#container div#page div#secondNav ul li.first{float:left; background:#becfdf url(/images/secondNav_li_first.jpg) right center no-repeat; margin:0; padding:0;}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* ARTICOL
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div#container div#page div.artUp{width:770px; height:13px; background:url(/images/artUp.jpg) no-repeat;}
+div#container div#page div.artM{width:770px; background:url(/images/artM.jpg) repeat-y;}
+div#container div#page div.artDown{width:770px; height:10px; background:url(/images/artDown.jpg) no-repeat;}
+
+
+div#container div#page div.artM .h1{background:url(/images/h1_bg.jpg) left center no-repeat; height:56px;}
+div#container div#page div.artM .h1 img{vertical-align:middle; padding-right:5px;}
+
+div#container div#page div.artM h1{text-indent:20px; line-height:54px; font-size:18px; color:#3e3e3e}
+div#container div#page div.artM h1.articlepage{background:url(/images/h1_article.jpg) no-repeat; height:56px; text-indent:80px; line-height:52px; font-size:18px; color:#3e3e3e}
+
+div#container div#page div.incontent{margin:0; padding:0 19px 0 19px;}
+.link-black{}
+div.link-black p a {color:black; text-decoration:underline;}
+div.link-black ul li a {color:black; text-decoration:underline;}
+div#container div#page div.artM div.div_new h1{background:url(/images/h1.jpg) no-repeat; height:56px; text-indent:80px; line-height:52px; font-size:18px; color:#3e3e3e}
+div#container div#page div.artM div.div_new1 h1{background:url(/images/h1_discoveryplan.jpg) no-repeat; height:56px; text-indent:80px; line-height:52px; font-size:18px; color:#3e3e3e}
+
+.subheading_color{color:#333333;text-decoration:none}
+.subheading_color_topnav{color:#FFFAF0;text-decoration:none}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* FOOTER
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+div#container div#footer{width:756px; margin:0 auto;  border-top:1px solid #cddde6; margin-top:10px;}
+div#container div#footer ul{margin:0px; padding:0; color:#397699; margin-top:4px;}
+div#container div#footer ul li{margin:0 0px 0 0px; padding:0 0px 0 0px; float:left; border-right:1px solid #cddde6; }
+div#container div#footer ul li.copyright{margin:0 0px 0 0px; padding:0 0px 0 10px; float:left; border-right:none;color:#397699; }
+div#container div#footer ul li a{text-decoration:none; margin:0 8px 0 8px; border-bottom:2px solid #cddde6; color:#397699;}
+div#container div#footer ul li a:hover{text-decoration:none}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* SIDEBAR
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div#container div#sidebar div.search{width:179px; height:33px; background:url(/images/search.jpg) no-repeat;}
+div#container div#sidebar div.search form {padding:5px; margin:0;}
+div#container div#sidebar div.search form fieldset input{margin:0px; padding:3px 5px 0 5px; color:666666; font-size:14px; width:125px;}
+
+div#container div#sidebar p.data{width:181px; text-align:center; padding:13px 0 10px 0; color:#666666; font-size:16px;}
+div#container div#sidebar p.title{width:181px; text-align:center; height:33px; background:url(/images/sidebar_title.jpg) repeat-x; color:#304c7f;  line-height:32px;}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* tool_tip (ionut)
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+.navtextall {width:194px; margin:0; padding:0;}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* subcategory
+/*--------------------------------------------------------------------------------------------------------------------------*/
+div#container div#page div.artM h1.subcategory{background:url(/images/h1.jpg) no-repeat; height:56px; text-indent:80px; line-height:52px; font-size:18px; color:#3e3e3e}
+
+
+div#container div#page div.artM .h1{background:url(/images/h1_bg.jpg) left center no-repeat; height:56px;}
+div#container div#page div.artM .h1 img{vertical-align:middle; padding-right:5px;}
+
+div#container div#page div.artM div.small_box .h4{background:url(/images/h4_small_box_bg.jpg) right center no-repeat; height:42px; width:209px; margin:8px 0 10px 10px; }
+
+div#container div#page div.artM div.small_box .h4 img{vertical-align:middle;}
+
+div#container div#page div.artM div.small_box h4{text-indent:0px; line-height:40px; font-size:16px; color:#3e3e3e; margin:0; padding:0; }
+
+div#container div#page div.artM div.small_box{background:url(/images/small_box.jpg) no-repeat; width:236px; height:222px; float:left;  margin:0 3px 10px 3px;}
+
+div#container div#page div.artM div.small_box ul{margin:15px 20px 0 15px; padding:0;}
+div#container div#page div.artM div.small_box ul li{ margin:5px 0 0 5px; padding:0px 0 5px 0; display: block; border-bottom:1px solid #dde8ee; }
+div#container div#page div.artM div.small_box ul li a { background: url(/images/sageata_Nav.jpg) no-repeat; background-position: left center;  display: block;  color:#656565; text-decoration:underline; text-indent:25px; padding:5px 0 5px 0; }
+div#container div#page div.artM div.small_box ul li a:hover { background: url(/images/sageata_Nav_over.jpg) no-repeat; background-position: left center; color: #000000; display: block; text-decoration:none;}
+
+div#container div#page div.artM div.small_box ul li.more{ margin:5px 0 0 5px; padding:0px 0 5px 0; display: block; border-bottom:none; }
+div#container div#page div.artM div.small_box ul li.more a { background: url(/images/sageata_Nav.jpg) no-repeat; background-position: right center;  display: block;  color:#656565; text-decoration:underline; padding:5px 24px 5px 0; text-align:right; }
+div#container div#page div.artM div.small_box ul li.more a:hover { background: url(/images/sageata_Nav_over.jpg) no-repeat; background-position: right center; color: #000000; display: block; text-decoration:none;}
+
+
+/*---homepage-------------------------------------------------*/
+.blue{color:#304c7f;}
+.red{color:#cf1e1e;}
+div#container div#sidebar .testimonials_box{width:181px; background:url(/images/testimonials_box.jpg) no-repeat; margin-top:10px; border:1px solid #a9bbd0; border-top:none;}
+div#container div#sidebar .testimonials_box .head{text-align:center; font-size:14px; padding:13px 0 5px 0;}
+div#container div#sidebar .testimonials_box .foto{text-align:center; border-bottom:1px solid #a9bbd0;}
+div#container div#sidebar .testimonials_box p{padding:8px;}
+
+div#container div#page div.artM .left_home{width:436px; float:left;}
+div#container div#page div.artM .right_home{width:290px; float:right;}
+
+div#container div#page div.artM .right_home h3{background:url(/images/h3_right_home.jpg) no-repeat; width:286px; height:29px; text-indent:10px; line-height:24px; font-size:18px; color:#3e3e3e; margin:0; padding:0;}
+div#container div#page div.artM .right_home .h3_box{background:#dde8ee url(/images/h3_right_home_box.jpg) left bottom no-repeat; width:286px; margin-bottom:10px; }
+div#container div#page div.artM .right_home .h3_box p{padding:10px;}
+div#container div#page div.artM .right_home .h3_box .inbox{padding:5px;}
+
+div#container div#page div.artM .right_home .h3_box form{padding:10px; margin:0;}
+div#container div#page div.artM .right_home .h3_box form fieldset{padding:0px; margin:0 0 10px 0; border:none;}
+div#container div#page div.artM .right_home .h3_box form fieldset input{background:url(/images/input_home.jpg) no-repeat; width:266px; padding:5px 0 4px 0;}
+
+div#container div#page div.artM .right_home .h3_box form fieldset.left {float:left; color:#304c7f; }
+div#container div#page div.artM .right_home .h3_box form fieldset.left input {margin:0px ; width:13px; height:14px; padding: 0px; border: none;	background: url(/images/input_checkbox_home.jpg) no-repeat left top; cursor: pointer; text-indent:0px; text-align: left; color:#304c7f; text-decoration:underline;}
+div#container div#page div.artM .right_home .h3_box form fieldset.left p a {color:#304c7f; text-decoration:underline; background:url(/images/arrow_home.jpg) left center no-repeat; padding-left:15px; }
+div#container div#page div.artM .right_home .h3_box form fieldset.left p a:hover{color:#304c7f; text-decoration:none;}
+
+div#container div#page div.artM .right_home .h3_box form fieldset.right {float:right;}
+div#container div#page div.artM .right_home .h3_box form fieldset.right input {float: left; margin: 0px 0px 0px ; width:98px; height:27px; padding: 0px;border: none;	background: url(/images/login_home.jpg) no-repeat left top; cursor: pointer; text-indent:10px; text-align: left;}
+div#container div#page div.artM .right_home .h3_box form fieldset.right input:hover {background-position: left bottom}
+
+
+div#container div#page div.artM .right_home .h3_box .white_contUp{background:url(/images/white_contUp.jpg) no-repeat; width:277px; height:6px; margin:0 auto; }
+div#container div#page div.artM .right_home .h3_box .white_contM{background:url(/images/white_contM.jpg) repeat-y; width:277px; margin:0 auto; }
+div#container div#page div.artM .right_home .h3_box .white_contDown{background:url(/images/white_contDown.jpg) no-repeat; width:277px; height:5px; margin:0 auto; margin-bottom:5px;}
+
+div#container div#page div.artM .right_home .h3_box .white_contM ul{margin:0px 20px 0 15px; padding:0;}
+div#container div#page div.artM .right_home .h3_box .white_contM ul li{ margin:0px 0 0 5px; padding:0px 0 5px 0; display: block; border-bottom:1px solid #dde8ee; }
+div#container div#page div.artM .right_home .h3_box .white_contM ul li a { background: url(/images/sageata_Nav.jpg) no-repeat; background-position: left center;  display: block;  color:#656565; text-decoration:underline; text-indent:25px; padding:5px 0 5px 0; }
+div#container div#page div.artM .right_home .h3_box .white_contM ul li a:hover { background: url(/images/sageata_Nav_over.jpg) no-repeat; background-position: left center; color: #000000; display: block; text-decoration:none;}
+
+div#container div#page div.artM .video_box{width:428px; padding:14px 0 14px 0; border:1px solid #d3e2ec; background:#dfeaf0; text-align:center;}
+
+div#container div#page div.artM .text_box{width:436px; height:135px; background:url(/images/text_box_home.jpg) no-repeat; text-align:center; margin-top:10px;}
+div#container div#page div.artM .text_box p{padding:25px; font-size:18px; color:#000000;}
+
+
+div#container div#page div.artM .right_home .home_quotes{background:url(/images/home_quotes.jpg) no-repeat; width:290px; height:172px; margin-bottom:10px; }
+div#container div#page div.artM .right_home .home_quotes h2{line-height:18px; font-size:18px; color:#3e3e3e; margin:0; padding:20px 0 0 60px;}
+div#container div#page div.artM .right_home .home_quotes p{padding:25px 18px 5px 18px;}
+div#container div#page div.artM .right_home .home_quotes p.alignright{float:right; text-align:right; padding:5px 18px 5px 18px;}
+
+#button_signup_doit_home {margin:10px 0px 0px 0;}
+#button_signup_doit_home a.rollover {
+	display:block;
+	width:430px; /* width of the image */
+	height:38px; /* height of the image */
+	line-height:38px; /* for the vertical alignement */
+	background-image:url(/images/button_signup_doit_home.jpg); /* image you want to rollover */
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-align:center;
+	text-decoration:none;
+	color:#000000;
+	font-size:14px;
+}
+#button_signup_doit_home a {
+	text-decoration:none;
+        color:#333333;
+}
+#button_signup_doit_home a.rollover:hover {
+background-position: left center;
+text-decoration:none;
+}
+
+#button_orange_arrow_center {margin:0 auto;}
+#button_orange_arrow_center a.rollover {
+	display:block;
+	width:219px; /* width of the image */
+	height:27px; /* height of the image */
+	line-height:27px; /* for the vertical alignement */
+	background-image:url(/images/button_orange_arrow.jpg); /* image you want to rollover */
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align:center;
+	text-decoration:none;
+	color:#333333;
+	text-indent:13px;
+	margin:0 auto;
+}
+#button_orange_arrow_center a.rollover:hover {
+background-position: left bottom;
+color:#333333;
+}
+
+#button_orange_arrow_center a {
+	text-decoration:none;
+        color:#333333;
+}
+
+/*CSS for Reset password page*/
+div#container div#page div.artM .reset_form form{padding:10px; margin:0;}
+div#container div#page div.artM .reset_form form fieldset{padding:0px; margin:0 0 10px 0; border:none;}
+div#container div#page div.artM .reset_form form fieldset input{background:url(/images/input_home.jpg) no-repeat; width:266px; padding:5px 0 4px 0;}
+div#container div#page div.artM .reset_form form fieldset textarea{width:376px; height:100px; padding: 5px 0px 5px 0; background:url(/images/textarea_mygoalsheet.jpg) no-repeat; border:none; text-indent:5px;}
+
+div#container div#page div.artM .reset_form form fieldset.right {float:left;}
+div#container div#page div.artM .reset_form form fieldset.right input {float: left; margin: 0px 0px 0px ; width:220px; height:27px; padding: 0px;border: none;	background: url(/images/button_orange_arrow.jpg) no-repeat left top; cursor: pointer; text-indent:10px; text-align: left;}
+div#container div#page div.artM .reset_form form fieldset.right input:hover {background-position: left bottom}
+
+/*CSS for admin*/
+div#container div#page div.artM .button_orange_arrow {
+                     float: left; margin: 0px 0px 0px ;
+                     width:220px; height:27px; padding: 0px;border: none;
+                     background: url(/images/button_orange_arrow.jpg) no-repeat left top;
+                     cursor: pointer; text-align: center;text-decoration:none; color:#333333}
+div#container div#page div.artM .button_orange_arrow a.rollover:hover {background-position: left bottom}
+
+ul.treemenu li{
+    list-style: square;
+    list-style-position:inside;
+/*    line-height:22px;*/
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/* TOP NAVI
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+ul#topnav {width:483px; height:35px; margin-top:14px; padding:0;  background:url(/images/topNab_bg.jpg) top left no-repeat;}
+ul#topnav li { margin:4px 0 0 4px; padding:0; float:left; text-align:center; height:27px; width:115px; display: block; 	position: relative; /*--Important--*/
+}
+ul#topnav li a {
+	background: url(/images/topNav_simple.jpg) 100% 100% no-repeat; display: block; height: 27px; color:#515151; text-decoration:none; font-size:18px; line-height:28px;
+	text-indent: -9999px; /*--Push text off of page--*/
+
+}
+ul#topnav li:hover a, ul#topnav li a:hover {  background:#000000 url(/images/topNav_simple_over.jpg) 100% 100% no-repeat; color: #000000; display: block; height: 27px; } /*--Hover State--*/
+
+ul#topnav li.home { margin-right:1px; }
+ul#topnav li.home a { background: url(/images/topNav_home.jpg) no-repeat; background-position: left bottom; }
+/*ul#topnav li.home a#select { background: url(/images/topNav_home.jpg) no-repeat; background-position: left top; }*/
+ul#topnav li.home a:hover { background: url(/images/topNav_home.jpg) no-repeat; background-position: left top; }
+
+
+ul#topnav li.bussines {}
+ul#topnav li.bussines a { background: url(/images/topNav_bussines.jpg) no-repeat; background-position: left bottom;}
+ul#topnav li.bussines a#select { background: url(/images/topNav_bussines.jpg) no-repeat; background-position: left top;}
+ul#topnav li.bussines a:hover { background: url(/images/topNav_bussines.jpg) no-repeat; background-position: left top; }
+
+ul#topnav li.personal {}
+ul#topnav li.personal a { background: url(/images/topNav_personal.jpg) no-repeat; background-position: left bottom; }
+ul#topnav li.personal a#select { background: url(/images/topNav_personal.jpg) no-repeat; background-position: left top; }
+ul#topnav li.personal a:hover { background: url(/images/topNav_personal.jpg) no-repeat; background-position: left top; }
+
+ul#topnav li.myarea { margin-left:5px; }
+ul#topnav li.myarea a { background: url(/images/topNav_myarea.jpg) no-repeat; background-position: left bottom; }
+ul#topnav li.myarea a#select { background: url(/images/topNav_myarea.jpg) no-repeat; background-position: left top; }
+ul#topnav li.myarea a:hover { background: url(/images/topNav_myarea.jpg) no-repeat; background-position: left top; }
+
+
+ul#topnav li .sub {
+	position: absolute; /*--Important--*/
+	top: 27px;
+	left: 0;
+	z-index: 99999;
+	background: #d68f25 ; /*--Background gradient--*/
+	padding: 5px 5px 5px;
+	float: left;
+	/*--Bottom right rounded corner--*/
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	/*--Bottom left rounded corner--*/
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	/*--Bottom left rounded corner--*/
+	-moz-border-radius-topright: 5px;
+	-khtml-border-radius-topright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	display: none; /*--Hidden for those with js turned off--*/
+}
+ul#topnav li .row { /*--If needed to break out into rows--*/
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+ul#topnav li .sub ul{
+	list-style: none;
+	margin: 0; padding: 0;
+	width: 203px;
+	float: left;
+	text-align:left
+}
+ul#topnav .sub ul li {
+	width: 100%; /*--Override parent list item--*/
+	color: #fff;
+	height:59px;
+	width: 203px;
+	margin:0; padding:0;
+	text-align:left
+}
+ul#topnav .sub ul li a {
+	color:#333333;
+	font-size:13px;
+	font-weight:bold;
+	text-decoration: none;
+	font-family:Arial, Helvetica, sans-serif;
+	text-indent:5px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	line-height:59px;
+}
+ul#topnav .sub ul li a img {
+	vertical-align:middle;
+	padding-right:5px;
+}
+
+/* new style for top navigation---------------- */
+ul#topnav .sub ul li a.rolloverlefttop {
+	background: url("/images/background_left_top_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverlefttop:hover {
+	background-position: left bottom;
+}
+
+ul#topnav .sub ul li a.rolloverleft {
+	background: url("/images/background_left_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverleft:hover {
+	background-position: left bottom;
+}
+
+ul#topnav .sub ul li a.rolloverleftdown {
+	background: url("/images/background_left_down_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverleftdown:hover {
+	background-position: left bottom;
+}
+
+ul#topnav .sub ul li a.rolloverrighttop {
+	background: url("/images/background_right_top_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverrighttop:hover {
+	background-position: left bottom;
+}
+
+ul#topnav .sub ul li a.rolloverright {
+	background: url("/images/background_right_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverright:hover {
+	background-position: left bottom;
+}
+
+ul#topnav .sub ul li.rolloverrightdown {
+	background: url("/images/background_right_down_new.jpg");
+	background-position: left top;
+	height:59px;
+	}
+
+
+ul#topnav .sub ul li a.rolloverrightdown {
+	background: url("/images/background_right_down.jpg");
+	background-position: left bottom;
+	height:59px;
+	}
+ul#topnav .sub ul li a.rolloverrightdown:hover {
+	background-position: left top;
+}
+/* new style for top navigation ends here---------------- */
+
+/*--------------------------------------------------------------------------------------*/
+/*--------------------------------------Css for Alternate color---------------------------------*/
+/*--------------------------------------------------------------------------------------*/
+.list {background-color: #FFEFBC; width:700px;  line-height:35px; padding-left:10px;}
+/*.list {background:url(/images/accordeon_small_field.jpg) repeat-x; width:700px; height:35px; line-height:35px; padding-left:10px;}*/
+.list_simple {background-color: #D6E0AF;width:700px; line-height:35px; padding-left:10px;}
+.list a {vertical-align:middle;}
+.list_simple a {vertical-align:middle;}
+
+
+.handle {
+    padding: 2px 2px 2px 2px;
+    color: red;
+    cursor: pointer;
+ }
+.list_articles {
+     list-style-type:none;
+}
+
+.expand
+{
+   cursor: pointer;
+   float:right;
+}
+
+/*CSS for search box*/
+/*fieldset input.search_box{background:url(/images/input_home.jpg) no-repeat; width:266px; padding:5px 0 4px 0;}*/
+div#container div.search{width:179px; height:33px; background:url(/images/search.jpg) no-repeat;}
+div#container div.search form {padding:5px; margin:0;}
+div#container div.search form fieldset input{margin:0px; padding:3px 5px 0 5px; color:666666; font-size:14px; width:125px;}
+/*CSS for search box end here */

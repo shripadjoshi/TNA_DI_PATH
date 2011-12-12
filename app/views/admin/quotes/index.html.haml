@@ -1,0 +1,18 @@
+.artUp
+.artM
+ %h1(class= "subcategory")Quotes
+ .incontent
+  = link_to 'New Quote', new_admin_quote_path
+  .listpage
+   -@quotes.each_with_index do |quote, index|
+    = link_to quote.content, admin_quote_path(quote), :title => quote.content
+    = link_to 'Edit', edit_admin_quote_path(quote)
+    |
+    = link_to 'Destroy', admin_quote_path(quote), :confirm => 'Are you sure?', :method => :delete
+    |
+    %div(id="favourite_#{quote.id}" class="favourite")
+     -#= render :partial => "favourite", :locals => {:quote => quote}
+     -#= link_to_remote quote.sys_favourite? ? "Un-Mark Sys. Favourite" : "Mark Sys. Favourite",:url => change_fav_admin_quote_path(quote) , :method => :get
+     = link_to_remote get_fav_text(quote),:url => change_fav_admin_quote_path(quote) , :method => :get
+    %br
+    %br

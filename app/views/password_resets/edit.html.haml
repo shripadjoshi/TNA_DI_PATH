@@ -1,0 +1,13 @@
+.artUp
+.artM
+ %h1(class="subcategory")Update your password
+ .incontent
+  %p Please enter the new password and confirmed password below and then press "Update Password".
+  .reset_form
+   -form_tag password_reset_path, :method => :put do
+    %fieldset
+     = password_field_tag :password
+    %fieldset
+     = password_field_tag :password_confirmation
+    %fieldset
+     = submit_tag "Update Password",{:id => "button"}

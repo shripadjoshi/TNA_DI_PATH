@@ -1,0 +1,18 @@
+.artUp
+.artM
+ %h1(class= "subcategory")E-Tutors
+ .incontent
+  = link_to 'New E-Tutor', new_admin_e_tutor_path
+  %br
+  %br
+  .listpage
+   -@e_tutors.each_with_index do |e_tutor, index|
+    = link_to e_tutor.content, edit_admin_e_tutor_path(e_tutor), :title => e_tutor.content
+    = link_to 'Edit', edit_admin_e_tutor_path(e_tutor)
+    |
+    = link_to 'Destroy', admin_e_tutor_path(e_tutor), :confirm => 'Are you sure?', :method => :delete
+    |
+    %div(id="favourite_#{e_tutor.id}" class="favourite")
+     = render :partial => "favourite", :locals => {:e_tutor => e_tutor}
+    %br
+    %br
